@@ -1,6 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Heart, Share2, MoreHorizontal, Clock, Activity as ActivityIcon } from 'lucide-react';
+import { useParams, Link } from 'react-router-dom';
+import { Heart, Share2, Clock, Activity as ActivityIcon } from 'lucide-react';
 import { LineChart, Line, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -60,14 +60,14 @@ const NFTDetail: React.FC = () => {
                 <div className="bg-whisky-card border border-whisky-gold/20 rounded-xl p-6 shadow-lg">
                     <p className="text-gray-400 text-sm mb-2">Current Price</p>
                     <div className="flex items-end gap-4 mb-6">
-                        <span className="text-4xl font-bold text-white">4.5 ETH</span>
-                        <span className="text-gray-500 mb-1">($12,450.00)</span>
+                        <span className="text-4xl font-bold text-white">4,500 USDC</span>
+                        <span className="text-gray-500 mb-1">($4,500.00)</span>
                     </div>
 
                     <div className="flex gap-4">
-                        <button className="flex-1 bg-gradient-to-r from-whisky-gold to-whisky-light text-whisky-dark font-bold py-4 rounded-xl hover:opacity-90 transition-opacity shadow-[0_0_15px_rgba(212,165,116,0.2)]">
+                        <Link to={`/nft/${id}/checkout`} className="flex-1 bg-gradient-to-r from-whisky-gold to-whisky-light text-whisky-dark font-bold py-4 rounded-xl hover:opacity-90 transition-opacity shadow-[0_0_15px_rgba(212,165,116,0.2)] text-center flex items-center justify-center">
                             Buy Now
-                        </button>
+                        </Link>
                         <button className="flex-1 border border-whisky-gold/30 text-whisky-gold font-bold py-4 rounded-xl hover:bg-whisky-gold/10 transition-colors">
                             Make Offer
                         </button>

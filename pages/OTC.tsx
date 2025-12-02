@@ -60,9 +60,14 @@ const OTC: React.FC = () => {
                 />
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
             </div>
-            <Link to="/otc/deal/create-otc" className="flex items-center justify-center h-14 px-8 bg-whisky-gold text-whisky-dark font-bold rounded-xl hover:opacity-90 transition-opacity whitespace-nowrap">
-                Submit your OTC deal
-            </Link>
+            <div className="flex gap-4">
+                <Link to="/otc/my-deals" className="flex items-center justify-center h-14 px-6 border border-whisky-gold/30 text-whisky-gold font-bold rounded-xl hover:bg-whisky-gold/10 transition-colors whitespace-nowrap">
+                    My OTC Deals
+                </Link>
+                <Link to="/otc/deal/create-otc" className="flex items-center justify-center h-14 px-8 bg-whisky-gold text-whisky-dark font-bold rounded-xl hover:opacity-90 transition-opacity whitespace-nowrap">
+                    Submit your OTC deal
+                </Link>
+            </div>
         </div>
       </div>
 

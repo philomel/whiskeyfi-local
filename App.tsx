@@ -6,10 +6,12 @@ import Explore from './pages/Explore';
 import OTC from './pages/OTC';
 import OTCDealDetail from './pages/OTCDealDetail';
 import CreateOTCDeal from './pages/CreateOTCDeal';
+import MyOTCDeals from './pages/MyOTCDeals';
 import Activity from './pages/Activity';
 import Profile from './pages/Profile';
 import Settings from './pages/Settings';
 import NFTDetail from './pages/NFTDetail';
+import NFTCheckout from './pages/NFTCheckout';
 import MyAccount from './pages/MyAccount';
 import NFTManagement from './pages/NFTManagement';
 import Notifications from './pages/Notifications';
@@ -24,6 +26,7 @@ const App: React.FC = () => {
           
           {/* OTC Routes */}
           <Route path="/otc" element={<OTC />} />
+          <Route path="/otc/my-deals" element={<MyOTCDeals />} />
           <Route path="/otc/deal/create-otc" element={<CreateOTCDeal />} />
           <Route path="/otc/deal/:id" element={<OTCDealDetail />} />
 
@@ -54,6 +57,7 @@ const App: React.FC = () => {
           <Route path="/settings/privacy" element={<Settings initialTab="privacy" />} />
 
           <Route path="/nft/:id" element={<NFTDetail />} />
+          <Route path="/nft/:id/checkout" element={<NFTCheckout />} />
           <Route path="/create" element={<div className="p-20 text-center text-whisky-gold">Create Feature Coming Soon</div>} />
         </Routes>
       </Layout>
